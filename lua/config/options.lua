@@ -2,14 +2,14 @@
 --------------------------------------------------------------------------------
 -- Relative and absolute line numbers combined
 vim.opt.number = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 vim.opt.termguicolors = true
 
 -- Keep signcolumn on by default
 vim.opt.signcolumn = "yes"
 
 -- Cursorline
--- vim.opt.cursorline = true
+vim.opt.cursorline = true
 
 -- Show whitespace characters
 vim.opt.list = true
