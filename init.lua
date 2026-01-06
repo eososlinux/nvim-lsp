@@ -25,4 +25,3 @@ require("config.keymap")
 require("config.autocmd")
 require("config.colorscheme")
 require("config.diagnostics")
-

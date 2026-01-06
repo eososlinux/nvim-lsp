@@ -7,8 +7,6 @@ return {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"saadparwaiz1/cmp_luasnip",
-
-		-- Snippets
 		"L3MON4D3/LuaSnip",
 	},
 
@@ -16,15 +14,14 @@ return {
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
 
-		-- Cargar snippets por defecto (VSCode)
+		-- Cargar snippets
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
+			--------------------------------------------------------------------------
+			-- COMPORTAMIENTO
+			--------------------------------------------------------------------------
 			preselect = cmp.PreselectMode.None,
-
-			completion = {
-				autocomplete = true,
-			},
 
 			snippet = {
 				expand = function(args)
@@ -32,16 +29,16 @@ return {
 				end,
 			},
 
+			--------------------------------------------------------------------------
+			-- MAPEOS
+			--------------------------------------------------------------------------
 			mapping = cmp.mapping.preset.insert({
-				-- Abrir completado manualmente
 				["<C-Space>"] = cmp.mapping.complete(),
 
-				-- Confirmar selección
 				["<CR>"] = cmp.mapping.confirm({
-					select = false, -- SOLO confirma si elegiste algo
+					select = false,
 				}),
 
-				-- TAB: siguiente item / snippet / fallback
 				["<Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_next_item()
@@ -52,7 +49,6 @@ return {
 					end
 				end, { "i", "s" }),
 
-				-- SHIFT+TAB: item previo / snippet atrás
 				["<S-Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_prev_item()
@@ -64,29 +60,22 @@ return {
 				end, { "i", "s" }),
 			}),
 
-			sources = cmp.config.sources({
+			--------------------------------------------------------------------------
+			-- FUENTES
+			--------------------------------------------------------------------------
+			sources = {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
 				{ name = "path" },
 				{ name = "buffer" },
-			}),
+			},
 
+			--------------------------------------------------------------------------
+			-- VENTANAS
+			--------------------------------------------------------------------------
 			window = {
 				completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered(),
-			},
-
-			formatting = {
-				fields = { "kind", "abbr", "menu" },
-				format = function(entry, item)
-					item.menu = ({
-						nvim_lsp = "[LSP]",
-						buffer = "[BUF]",
-						path = "[PATH]",
-						luasnip = "[SNIP]",
-					})[entry.source.name]
-					return item
-				end,
 			},
 		})
 	end,
