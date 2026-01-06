@@ -1,7 +1,7 @@
 return {
   -- Tus plugins mason, etc.
-  { "williamboman/mason.nvim", ... },
-  { "williamboman/mason-lspconfig.nvim", ... },
+  { import = "plugins.mason" },
+  { import = "plugins.treesitter" },
 
   -- Colorscheme
   {
