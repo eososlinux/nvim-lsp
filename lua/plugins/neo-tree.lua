@@ -29,6 +29,7 @@ return {
       window = {
         position = "left",
         width = 36,
+        preserve = true,
       },
     })
   end,
