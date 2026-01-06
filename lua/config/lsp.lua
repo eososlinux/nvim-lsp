@@ -10,7 +10,7 @@
 -- Registrar servidores LSP (OBLIGATORIO en 0.11)
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('basedpy_ls')
--- vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('rust_analyzer')
 
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
