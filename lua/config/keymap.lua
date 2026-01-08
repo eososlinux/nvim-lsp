@@ -51,3 +51,6 @@ vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { desc = "LSP referenc
 vim.keymap.set("n", "<leader>fd", builtin.lsp_definitions, { desc = "LSP definitions" })
 vim.keymap.set("n", "<leader>fi", builtin.lsp_implementations, { desc = "LSP implementations" })
 vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Document symbols" })
+
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Ventana izquierda" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Ventana derecha" })
