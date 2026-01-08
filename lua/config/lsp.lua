@@ -11,6 +11,7 @@
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('basedpy_ls')
 vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('bash_ls')
 
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
