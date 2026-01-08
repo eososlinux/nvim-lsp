@@ -54,3 +54,5 @@ vim.keymap.set("n", "<leader>fs", builtin.lsp_document_symbols, { desc = "Docume
 
 vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Ventana izquierda" })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Ventana derecha" })
+
+vim.keymap.set({ "n", "i", "v" }, "<C-s>", "<cmd>w<CR>", { desc = "Guardar archivo" })
