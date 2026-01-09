@@ -16,6 +16,7 @@ return {
 			rust = { "rustfmt" },
 			json = { "jq" },
 			sh = { "shfmt" },
+			html = { "prettier" },
 		},
 	},
 }

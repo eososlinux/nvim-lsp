@@ -35,7 +35,7 @@ return {
 					"ruff", -- LSP para linting Python
 					"rust_analyzer",
 					"bashls", -- <-- Así se llama bash-language-server en lspconfig/nativo
-					-- Agrega más LSPs aquí (nombres de lspconfig, ej: "pyright" si usas otro)
+					"html-lsp",
 				},
 				automatic_installation = true,
 			})
