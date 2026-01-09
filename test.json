@@ -1,0 +1,16 @@
+{
+  "name": "prueba-lsp",
+  "version": "1.0.0",
+  "description": "Archivo JSON simple para probar LSP",
+  "enabled": true,
+  "count": 3,
+  "items": [
+    "uno",
+    "dos",
+    "tres"
+  ],
+  "config": {
+    "theme": "dark",
+    "timeout": 5000
+  }
+}

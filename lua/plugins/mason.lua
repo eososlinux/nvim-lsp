@@ -35,7 +35,8 @@ return {
 					"ruff", -- LSP para linting Python
 					"rust_analyzer",
 					"bashls", -- <-- Así se llama bash-language-server en lspconfig/nativo
-					"html-lsp",
+					-- "html-lsp",
+					"jsonls",
 				},
 				automatic_installation = true,
 			})
